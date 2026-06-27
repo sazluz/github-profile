@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import HowItWorks from './components/HowItWorks'
 import Features from './components/Features'
 import DashboardPreview from './components/DashboardPreview'
+import CTA from './components/CTA'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
     <HowItWorks />
     <Features />
     <DashboardPreview />
+    <CTA />
     </>
   )
 }
