@@ -203,7 +203,6 @@ const LanguageChart = ({ repos }) => {
                   text-xs
                   text-slate-500
                 ">
-                  ({count})
                 </span>
 
 

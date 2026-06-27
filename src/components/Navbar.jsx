@@ -17,7 +17,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <a href="#" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2">
             <FaGithub className="h-8 w-8 text-white" />
 
             <span className="text-lg font-semibold text-white">
@@ -55,7 +55,7 @@ const Navbar = () => {
         {/* Github button */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="#"
+            href="https://github.com/sazluz/github-profile"
             className="flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-emerald-400"
           >
             Star on GitHub
