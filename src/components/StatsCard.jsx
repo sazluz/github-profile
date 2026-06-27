@@ -50,7 +50,7 @@ const StatsCard = ({ user, repos }) => {
         return (
           <div
             key={stat.title}
-            className="rounded-2xl border border-slate-800 bg-slate-900 p-6"
+            className="rounded-2xl border border-slate-800 bg-slate-950 p-6"
           >
 
             <Icon className={`h-6 w-6 ${stat.color}`} />

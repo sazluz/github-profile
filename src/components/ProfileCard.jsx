@@ -2,7 +2,7 @@ import { Users, UserPlus } from "lucide-react";
 
 const ProfileCard = ({ user }) => {
   return (
-    <div className="rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-xl">
+    <div className="rounded-3xl border border-slate-800 bg-slate-950 p-6 shadow-xl">
 
       <div className="flex flex-col items-center text-center sm:flex-row sm:text-left">
 
