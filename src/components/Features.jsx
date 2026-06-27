@@ -24,7 +24,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section class="py-20 px-4 bg-black flex flex-col justify-center items-center gap-6 z-50">
+    <section class="py-20 px-4 bg-black flex flex-col justify-center items-center gap-6 z-50 border-b border-slate-800">
     <h2 class="text-3xl md:text-[40px]/12 font-medium text-gray-100 max-w-lg text-center leading-tight">Powerful GitHub Analytics</h2>
     <p className='text-base/7 text-gray-200 max-w-xl text-center'>Explore GitHub profiles with meaningful insights. Analyze repositories, programming languages, and developer activity in one clean dashboard.</p>
     <div class="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">

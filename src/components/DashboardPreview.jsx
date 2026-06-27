@@ -2,7 +2,7 @@ import { GitBranch, Star, Code2, Lightbulb } from "lucide-react";
 
 const DashboardPreview = () => {
   return (
-    <section className=" py-24">
+    <section className="border-b border-slate-800 py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         {/* Heading */}
