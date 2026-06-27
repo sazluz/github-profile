@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import HowItWorks from './components/HowItWorks'
 import Features from './components/Features'
+import DashboardPreview from './components/DashboardPreview'
 
 function App() {
   return (
@@ -22,8 +23,9 @@ function App() {
      <Navbar />
      <Hero />
 </div>
-     <HowItWorks />
-     <Features />
+    <HowItWorks />
+    <Features />
+    <DashboardPreview />
     </>
   )
 }
