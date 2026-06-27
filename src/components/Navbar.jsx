@@ -4,8 +4,9 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { FaGithub } from "react-icons/fa";
 
 const navigation = [
-  { name: "Features", href: "#" },
-  { name: "How it works", href: "#" },
+  { name: "Features", href: "#Features" },
+  { name: "How it works", href: "#HowItWorks" },
+  { name: "Compare developers", href: "/compare" },
 ];
 
 const Navbar = () => {

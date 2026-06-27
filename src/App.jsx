@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
+import Compare from "./pages/Compare";
 
 
 function App() {
@@ -20,6 +21,11 @@ function App() {
         <Route 
           path="/dashboard/:username" 
           element={<Dashboard />} 
+        />
+
+        <Route
+          path="/compare"
+          element={<Compare />}
         />
 
       </Routes>
