@@ -19,7 +19,7 @@ const DashboardPreview = () => {
 
 
         {/* Dashboard Preview */}
-        <div className="mx-auto mt-16 max-w-5xl rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-2xl sm:p-8">
+        <div className="mx-auto mt-16 max-w-5xl rounded-3xl border border-slate-800 bg-slate-950 p-6 shadow-2xl sm:p-8">
 
           {/* Profile Header */}
           <div className="flex flex-col gap-5 border-b border-slate-800 pb-6 sm:flex-row sm:items-center">

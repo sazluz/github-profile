@@ -1,7 +1,62 @@
-import { BookOpen, Star, Trophy } from "lucide-react";
+import { BookOpen, Star, Trophy, CalendarDays } from "lucide-react";
 
 
 const StatsCard = ({ user, repos }) => {
+
+  const getGithubAge = (createdAt) => {
+
+  if (!createdAt) return "N/A";
+
+
+  const createdDate = new Date(createdAt);
+
+  const now = new Date();
+
+
+  const years =
+    now.getFullYear() -
+    createdDate.getFullYear();
+
+
+  const months =
+    now.getMonth() -
+    createdDate.getMonth();
+
+
+  const totalMonths =
+    years * 12 + months;
+
+
+  const activeYears =
+    Math.floor(totalMonths / 12);
+
+
+  const activeMonths =
+    totalMonths % 12;
+
+
+
+  const joined =
+    createdDate.toLocaleDateString(
+      "en-US",
+      {
+        month: "short",
+        year: "numeric",
+      }
+    );
+
+
+
+  if(activeYears > 0){
+
+    return `${joined} (${activeYears}y ${activeMonths}m)`;
+
+  }
+
+
+  return `${joined} (${activeMonths} months)`;
+
+};
 
   const totalStars = repos.reduce(
     (total, repo) => total + repo.stargazers_count,
@@ -30,13 +85,11 @@ const StatsCard = ({ user, repos }) => {
       color: "text-yellow-400",
     },
     {
-      title: "Top Repository",
-      value: mostStarredRepo
-        ? mostStarredRepo.name
-        : "N/A",
-      icon: Trophy,
-      color: "text-purple-400",
-    },
+  title: "GitHub Member Since",
+  value: getGithubAge(user.created_at),
+  icon: CalendarDays,
+  color: "text-purple-400",
+},
   ];
 
 
