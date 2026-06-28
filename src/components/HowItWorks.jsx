@@ -3,7 +3,7 @@ import React from 'react'
 const HowItWorks = () => {
   return (
     <div>
-    <section className="py-24 relative border-b border-slate-800">
+    <section id="how-it-works" className="py-24 relative border-slate-800">
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
             <div className="w-full flex-col justify-start items-center lg:gap-12 gap-10 inline-flex">
                 <div className="w-full flex-col justify-start items-center gap-3 flex">

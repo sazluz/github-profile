@@ -105,7 +105,7 @@ export default function Hero() {
 
     <div className="relative isolate px-6 pt-8 lg:px-8 lg:pt-2">
 
-      <div className="mx-auto max-w-2xl py-24 md:py-24 lg:py-36">
+      <div className="mx-auto max-w-2xl py-28 md:py-24 lg:py-36">
 
 
         <div className="text-center">

@@ -4,8 +4,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { FaGithub } from "react-icons/fa";
 
 const navigation = [
-  { name: "Features", href: "#Features" },
-  { name: "How it works", href: "#HowItWorks" },
+  { name: "Features", href: "/#features" },
+  { name: "How it works", href: "/#how-it-works" },
   { name: "Compare developers", href: "/compare" },
 ];
 
@@ -57,6 +57,7 @@ const Navbar = () => {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="https://github.com/sazluz/github-profile"
+            target="_blank"
             className="flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-emerald-400"
           >
             Star on GitHub
@@ -107,7 +108,8 @@ const Navbar = () => {
 
 
             <a
-              href="#"
+              href="https://github.com/sazluz/github-profile"
+            target="_blank"
               className="flex items-center gap-2 rounded-lg px-3 py-3 text-base font-semibold text-white hover:bg-white/5"
             >
               Star on GitHub
