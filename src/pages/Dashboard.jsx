@@ -8,6 +8,7 @@ import StatsCard from "../components/StatsCard";
 import LanguageChart from "../components/LanguageChart";
 import InsightsCard from "../components/InsightsCard";
 import TopRepositories from "../components/TopRepositories";
+import DashboardSkeleton from "../components/skeletons/DashboardSkeleton";
 
 const Dashboard = () => {
   const { username } = useParams();
@@ -39,12 +40,8 @@ const Dashboard = () => {
   }, [username]);
 
   if (loading) {
-    return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center text-white text-xl">
-        Loading GitHub Profile...
-      </div>
-    );
-  }
+  return <DashboardSkeleton />;
+}
 
   if (error) {
     return (
