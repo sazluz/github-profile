@@ -77,35 +77,6 @@ const ComparisonStats = ({ data }) => {
 
 
 
-  // Calculate wins
-
-  let firstWins = 0;
-  let secondWins = 0;
-
-
-  stats.forEach(stat => {
-
-    if(stat.first > stat.second){
-      firstWins++;
-    }
-
-    if(stat.second > stat.first){
-      secondWins++;
-    }
-
-  });
-
-
-
-  const winner = 
-    firstWins > secondWins
-      ? data.userOne.login
-      : secondWins > firstWins
-        ? data.userTwo.login
-        : null;
-
-
-
   return (
 
     <div className="

@@ -258,7 +258,7 @@ const Compare = () => {
 
 
     {[
-      "torvalds",
+      "vercel",
       "sindresorhus",
       "yyx990803",
       "gaearon"

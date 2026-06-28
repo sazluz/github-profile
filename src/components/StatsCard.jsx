@@ -1,4 +1,4 @@
-import { BookOpen, Star, Trophy, CalendarDays } from "lucide-react";
+import { BookOpen, Star, Trophy, CalendarDays, GitBranch } from "lucide-react";
 
 
 const StatsCard = ({ user, repos }) => {
@@ -75,7 +75,7 @@ const StatsCard = ({ user, repos }) => {
     {
       title: "Repositories",
       value: user.public_repos,
-      icon: BookOpen,
+      icon: GitBranch,
       color: "text-emerald-400",
     },
     {
