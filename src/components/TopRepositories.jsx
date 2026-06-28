@@ -78,17 +78,6 @@ const TopRepositories = ({ repos }) => {
                 <span className="text-xs text-slate-500">
   Updated {new Date(repo.updated_at).toLocaleDateString()}
 </span>
-
-{repo.private ? (
-  <span className="rounded-full bg-red-500/20 px-2 py-1 text-xs text-red-400">
-    Private
-  </span>
-) : (
-  <span className="rounded-full bg-emerald-500/20 px-2 py-1 text-xs text-emerald-400">
-    Public
-  </span>
-)}
-
                 <div className="mt-3 flex items-center gap-5 text-sm text-slate-400">
                   {repo.language && (
                    <div className="flex items-center gap-2">

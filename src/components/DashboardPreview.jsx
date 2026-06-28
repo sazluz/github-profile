@@ -229,7 +229,7 @@ color:"text-yellow-400"
 
   {
   title: "GitHub Member Since",
-  value: "Apr 2022 (4y 2m)",
+  value: "Apr 2022 (10y 3m)",
   icon: CalendarDays,
   color: "text-purple-400",
 },
@@ -635,12 +635,15 @@ Top Repository
 <div className="
  mt-5
  rounded-xl
- bg-slate-900
+  border
+ border-slate-800
+ bg-slate-950
  p-5
 ">
 
 
 <div className="
+
  flex
  items-center
  justify-between
@@ -699,17 +702,19 @@ className="
 
 
 <span>
-⭐ 245 stars
+Javascript
 </span>
 
 
-<span>
-🍴 38 forks
+<span className="flex items-center gap-1">
+  <Star size={15} />
+    100
 </span>
 
 
-<span>
-⚡ JavaScript
+<span className="flex items-center gap-1">
+  <GitFork size={15} />
+    5
 </span>
 
 
