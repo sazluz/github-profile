@@ -11,10 +11,12 @@ const COLORS = [
 ];
 
 
+
 const LanguageChart = ({ repos }) => {
 
 
   const languageCount = {};
+
 
 
   repos.forEach((repo) => {
@@ -30,6 +32,7 @@ const LanguageChart = ({ repos }) => {
 
 
 
+
   const totalLanguages =
     Object.values(languageCount)
       .reduce(
@@ -39,27 +42,81 @@ const LanguageChart = ({ repos }) => {
 
 
 
-  const languages =
+
+
+  let languages =
     Object.entries(languageCount)
 
       .map(([name, count]) => ({
+
         name,
+
         count,
+
         percent: Math.round(
           (count / totalLanguages) * 100
         )
+
       }))
 
       .sort(
         (a, b) =>
           b.percent - a.percent
-      )
-
-      .slice(0, 5);
+      );
 
 
 
-  if (!languages.length) {
+
+
+  // Keep top 5 languages
+
+  const topLanguages =
+    languages.slice(0, 5);
+
+
+
+
+  // Calculate remaining percentage
+
+  const displayedPercentage =
+    topLanguages.reduce(
+      (sum, language) =>
+        sum + language.percent,
+      0
+    );
+
+
+
+
+
+  // Add Other category if needed
+
+  if (displayedPercentage < 100) {
+
+    topLanguages.push({
+
+      name: "Other",
+
+      count: languages
+        .slice(5)
+        .reduce(
+          (sum, item) =>
+            sum + item.count,
+          0
+        ),
+
+      percent:
+        100 - displayedPercentage
+
+    });
+
+  }
+
+
+
+
+
+  if (!topLanguages.length) {
 
     return (
 
@@ -75,16 +132,20 @@ const LanguageChart = ({ repos }) => {
         "
       >
 
-        <div className="
-          flex
-          items-center
-          justify-between
-        ">
+        <div
+          className="
+            flex
+            items-center
+            justify-between
+          "
+        >
 
-          <h4 className="
-            font-semibold
-            text-white
-          ">
+          <h4
+            className="
+              font-semibold
+              text-white
+            "
+          >
             Language Breakdown
           </h4>
 
@@ -100,11 +161,13 @@ const LanguageChart = ({ repos }) => {
         </div>
 
 
-        <p className="
-          mt-6
-          text-sm
-          text-slate-400
-        ">
+        <p
+          className="
+            mt-6
+            text-sm
+            text-slate-400
+          "
+        >
           No language data available.
         </p>
 
@@ -114,6 +177,7 @@ const LanguageChart = ({ repos }) => {
     );
 
   }
+
 
 
 
@@ -133,18 +197,23 @@ const LanguageChart = ({ repos }) => {
     >
 
 
+
       {/* Header */}
-      <div className="
-        flex
-        items-center
-        justify-between
-      ">
 
+      <div
+        className="
+          flex
+          items-center
+          justify-between
+        "
+      >
 
-        <h4 className="
-          font-semibold
-          text-white
-        ">
+        <h4
+          className="
+            font-semibold
+            text-white
+          "
+        >
           Language Breakdown
         </h4>
 
@@ -157,62 +226,75 @@ const LanguageChart = ({ repos }) => {
           "
         />
 
-
       </div>
 
 
 
+
+
       {/* Languages */}
-      <div className="
-        mt-6
-        space-y-5
-      ">
+
+      <div
+        className="
+          mt-6
+          space-y-5
+        "
+      >
 
 
-        {languages.map(
-          ({ name, count, percent }, index) => (
+        {topLanguages.map(
+          (
+            { name, count, percent },
+            index
+          ) => (
+
 
           <div
             key={name}
           >
 
 
-            <div className="
-              mb-2
-              flex
-              items-center
-              justify-between
-              text-sm
-            ">
 
-
-              <div className="
+            <div
+              className="
+                mb-2
                 flex
                 items-center
-                gap-2
-              ">
+                justify-between
+                text-sm
+              "
+            >
 
-                <span className="
-                  text-slate-300
-                ">
+
+
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-2
+                "
+              >
+
+                <span
+                  className="
+                    text-slate-300
+                  "
+                >
                   {name}
                 </span>
 
-
-                <span className="
-                  text-xs
-                  text-slate-500
-                ">
-                </span>
 
 
               </div>
 
 
 
-              <span className="
-                text-slate-400
-              ">
+
+              <span
+                className="
+                  text-slate-400
+                "
+              >
                 {percent}%
               </span>
 
@@ -222,12 +304,15 @@ const LanguageChart = ({ repos }) => {
 
 
 
-            <div className="
-              h-2
-              overflow-hidden
-              rounded-full
-              bg-slate-800
-            ">
+
+            <div
+              className="
+                h-2
+                overflow-hidden
+                rounded-full
+                bg-slate-800
+              "
+            >
 
 
               <div
@@ -240,6 +325,7 @@ const LanguageChart = ({ repos }) => {
                   ${COLORS[index % COLORS.length]}
                 `}
 
+
                 style={{
                   width: `${percent}%`
                 }}
@@ -250,12 +336,17 @@ const LanguageChart = ({ repos }) => {
             </div>
 
 
+
+
           </div>
+
 
         ))}
 
 
+
       </div>
+
 
 
     </div>
@@ -263,6 +354,7 @@ const LanguageChart = ({ repos }) => {
   );
 
 };
+
 
 
 export default LanguageChart;
